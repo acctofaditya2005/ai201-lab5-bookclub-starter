@@ -62,8 +62,10 @@ def start_reading(user_id: str, book_id: str) -> ReadingEvent:
         raise ValueError(f"Book {book_id} not found")
 
     existing = ReadingEvent.query.filter_by(user_id=user_id, book_id=book_id).first()
-    if existing:
+    if existing and existing.finished_at is None:
         raise ValueError(f"User {user_id} is already reading book {book_id}")
+    if existing and existing.finished_at is not None:
+        raise ValueError(f"User {user_id} has already finished book {book_id}")
 
     event = ReadingEvent(
         user_id=user_id,
