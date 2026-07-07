@@ -33,7 +33,7 @@ python app.py          # start the server (runs at http://127.0.0.1:5000)
 | GET    | `/reading/history/<user_id>`    | Books a user has finished            |
 | GET    | `/stats/<user_id>`              | Reading streak, books this month, total pages |
 
-## Codebase structure
+## Codebase structures
 
 ```plaintext
 app.py                  Flask application factory
