@@ -121,7 +121,7 @@ def get_reading_history(user_id: str) -> list[ReadingEvent]:
     return (
         ReadingEvent.query.filter_by(user_id=user_id)
         .filter(ReadingEvent.finished_at.isnot(None))
-        .order_by(ReadingEvent.started_at.desc())
+        .order_by(ReadingEvent.finished_at.desc())
         .all()
     )
 
