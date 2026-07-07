@@ -128,6 +128,8 @@ Split the check into two branches: one for `finished_at is None` (genuinely stil
 ---
 
 ## Git Log Screenshot
+<img width="1143" height="147" alt="image" src="https://github.com/user-attachments/assets/45eb96d4-3df9-4b6a-a0f6-6ff867466f9b" />
+
 
 Run `git log --oneline` on the `bugfix/mixtape` branch to see:
 
